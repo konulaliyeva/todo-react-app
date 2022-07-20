@@ -1,25 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import React, {useState} from 'react';
+import "./index.css";
+import ListItemsForm from './components/ListItemsForm';
+import InputForm from './components/InputForm';
 
-function App() {
+ 
+function App(props){
+
+  const saveToDoItems = (inputItems) =>{
+    const listData = {...inputItems,
+    id: Math.random()
+    }
+   props.onAddItem(listData);
+  }
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+    <InputForm onSaveInputValue = {saveToDoItems}/>
+    <ListItemsForm />
+ 
+    </>
   );
+   
+  
+
 }
 
 export default App;
