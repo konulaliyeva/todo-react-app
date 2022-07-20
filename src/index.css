@@ -1,12 +1,23 @@
-body{
-  background-color: rgba(228, 220, 220, 0.6);
+body {
+  background: url("https://cdn.wallpapersafari.com/49/91/oXUWTi.jpg");
+  background-size: cover;
+  font-family: "Poppins", sans-serif;
 }
-.form{
+.container {
+  margin-bottom: 20%;
+}
+h1 {
+  text-align: center;
+  color: #fff;
+  margin-top: 50px;
+  margin-bottom: 0px;
+  font-family: "Rampart One", cursive;
+}
+.form {
   height: 15rem;
   width: 50%;
   background-color: #fff;
   position: relative;
-  top: 30%;
   left: 50%;
   transform: translate(-50%, 50%);
   display: flex;
@@ -15,37 +26,32 @@ body{
   border: 1px solid rgba(228, 220, 220, 0.3);
   border-radius: 10px;
   margin-bottom: 50px;
-
 }
 
-.form__input{
+.form__input {
   padding: 25px 20px;
   width: 75%;
   border: 1px solid rgba(228, 220, 220, 0.6);
   margin-left: 50px;
   border-radius: 5px;
   outline: none;
-
-
 }
 
-
-.form__items{
+.form__items {
   height: 15rem;
   width: 48%;
   background-color: rgba(146, 173, 182, 0.2);
   padding: 40px 20px 20px 20px;
-
 }
 
-.list_items{
+.list_items {
   list-style: none;
   border-radius: 5px;
   padding: 0px;
   color: rgb(56, 108, 125);
 }
 
-.list_item{
+.list_item {
   list-style: none;
   padding: 20px 10px;
   margin-bottom: 20px;

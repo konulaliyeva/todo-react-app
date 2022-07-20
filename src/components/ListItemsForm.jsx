@@ -1,33 +1,20 @@
-import React, { useState } from "react";
-import "../index.css";
-import EachListItem from "./EachListItem";
+import React, { useState } from 'react';
+import '../index.css';
 
-
-const dummyListItems = [
-  {
-    id: "e1",
-    title: "Laptop Charger",
-  },
-  {
-    id: "e2",
-    title: "Car",
-  },
-  
-];
-function ListItemsForm(props) {
-  
-  const [items, addedItems] = useState(dummyListItems);
-
-  const addListItems = (item) => {
-    addedItems((prevItems) => {
-      return [item, ...prevItems];
-    });
-  };
+function ListItemsForm({ items }) {
  
+
   return (
     <>
-     <EachListItem onAddItem={addListItems} items={items}/>
-     
+      <div className="form form__items">
+        <ul className="list_items">
+         {items.map(item =>{
+         return <li key ={item.id} className="list_item" >{item.title}</li>
+          })} 
+
+        </ul>
+      </div>
+      
     </>
   );
 }

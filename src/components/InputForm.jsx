@@ -1,21 +1,7 @@
-import React, { useState } from "react";
-import "../index.css";
-function InputForm(props) {
-  const [inputValue, setInputValue] = useState("");
-
-  const handleInputValue = (event) => {
-    setInputValue(event.target.value);
-  };
-
-  const handleSubmitForm =(event) =>{
-      event.preventDefault();
-      const listItems ={
-          title: inputValue
-      }
-      props.onSaveInputValue(listItems)
-      setInputValue('');
-  }
-
+import React, { useState } from 'react';
+import '../index.css';
+function InputForm({ inputValue, handleInputValue, handleSubmitForm }) {
+ 
 
   return (
     <>
