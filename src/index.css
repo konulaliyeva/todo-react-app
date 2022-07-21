@@ -1,17 +1,20 @@
 body {
-  background: url("https://cdn.wallpapersafari.com/49/91/oXUWTi.jpg");
-  background-size: cover;
+  /* background: url("https://cdn.wallpapersafari.com/49/91/oXUWTi.jpg");
+  background-size: 100% 100%; */
+  background:linear-gradient(#999fea,#718fa8);
   font-family: "Poppins", sans-serif;
 }
 .container {
   margin-bottom: 20%;
+
+
 }
 h1 {
   text-align: center;
   color: #fff;
-  margin-top: 50px;
-  margin-bottom: 0px;
+  margin-top: 40px;
   font-family: "Rampart One", cursive;
+  transform: translateY(50px);
 }
 .form {
   height: 15rem;
@@ -25,7 +28,7 @@ h1 {
   justify-content: center;
   border: 1px solid rgba(228, 220, 220, 0.3);
   border-radius: 10px;
-  margin-bottom: 50px;
+  margin-bottom: 20px;
 }
 
 .form__input {
@@ -35,13 +38,16 @@ h1 {
   margin-left: 50px;
   border-radius: 5px;
   outline: none;
+
 }
 
 .form__items {
-  height: 15rem;
+
+  /* height: 13rem; */
   width: 48%;
+  height: auto;
   background-color: rgba(146, 173, 182, 0.2);
-  padding: 40px 20px 20px 20px;
+  padding: 30px 20px 20px 20px;
 }
 
 .list_items {
@@ -51,10 +57,54 @@ h1 {
   color: rgb(56, 108, 125);
 }
 
-.list_item {
+.list_item_block{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   list-style: none;
-  padding: 20px 10px;
+  padding: 10px 10px;
   margin-bottom: 20px;
   background-color: #fff;
   border-radius: 5px;
 }
+
+.btn{
+  background-color: transparent;
+  border: none;
+}
+
+.fas{
+  margin-left: 10px;
+  font-size: 17px;
+  color: rgb(56, 108, 125);
+  pointer-events: none;
+}
+
+.date {
+  display: flex;
+  flex-direction: column;
+  width: 3.5rem;
+  height: 3.5rem;
+  border: 1px solid #ececec;
+  background-color: rgb(56, 108, 125);
+  color: white;
+  border-radius: 12px;
+  align-items: center;
+  justify-content: center;
+}
+.month{
+  font-size: 0.55rem;
+  font-weight: bold;
+}
+.day{
+  font-size: 1.rem;
+  font-weight: bold;
+}
+.year {
+  font-size: 0.55rem;
+}
+
+/* .border{
+ border: 2px solid red;
+} */
+

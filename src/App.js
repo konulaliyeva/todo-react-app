@@ -6,11 +6,14 @@ import InputForm from './components/InputForm';
 const dummyListItems = [
   {
     id: 'e1',
-    title: 'Do homework'
+    title: 'Do homework',
+    date: new Date(),
   },
   {
     id: 'e2',
-    title: 'Wash dishes'
+    title: 'Wash dishes',
+    date: new Date()
+
   }
 ];
 
@@ -26,23 +29,35 @@ function App() {
     event.preventDefault();
     const listItem = {
       title: inputValue,
-      id: Math.random()
+      id: Math.random(),
+      date: new Date()
     };
+    // if(inputValue ===""){
+    //   setItems('');
+    //   document.querySelector('.form__input').classList.add('border');
+     
+    // }
     setItems((prevItems) => {
       return [listItem, ...prevItems];
     });
+
     setInputValue('');
+    
+    
+    
   };
 
   return (
    <div className='container'>
      <h1>Tu .. du ..</h1>
       <InputForm
+       
         inputValue={inputValue}
         handleInputValue={handleInputValue}
         handleSubmitForm={handleSubmitForm}
+        
       />
-      <ListItemsForm items={items} />
+      <ListItemsForm items={items} inputValue={inputValue}/>
    </div>
   );
 }

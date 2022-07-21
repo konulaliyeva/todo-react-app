@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import '../index.css';
 function InputForm({ inputValue, handleInputValue, handleSubmitForm }) {
  
@@ -12,6 +12,7 @@ function InputForm({ inputValue, handleInputValue, handleSubmitForm }) {
           type="text"
           placeholder="Enter your item"
           onChange={handleInputValue}
+          required
         />
       </form>
     </>
