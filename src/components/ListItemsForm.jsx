@@ -9,7 +9,7 @@ function ListItemsForm({
 
   return (
     <>
-      <div className="form form__items">
+      <div className="form__items">
         <ul className="list_items">
           {items.map((item) => {
             return (

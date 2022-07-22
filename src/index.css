@@ -41,9 +41,11 @@ h1 {
 .form__items {
 
   /* height: 13rem; */
+  transform: translate(320px, 130px);
+  border-radius: 10px;
   width: 50%;
   height: auto;
-  background-color: rgba(146, 173, 182, 0.2);
+  background:linear-gradient(#999fea,#718fa8);
   padding: 30px 20px 20px 20px;
   font-size: 17px;
 
